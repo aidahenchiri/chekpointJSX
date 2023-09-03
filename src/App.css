@@ -1,38 +1,184 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+background-color: #8850FF;
+  font-family: "Roboto", "Helvetica", sans-serif;
+
+  will-change: background-color;
+}
+.card {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  width: 550px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 30 50 rgba(0, 0, 0, 0.2);
+  transform: translateX(80%);
+  transition: left 10s ease-out;
+  will-change: left;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 10px auto;
+
+}
+.card {
+  display: block;
+  top: 25px;
+
+}
+.card--19 {
+  left: 25%;
+
+}
+.card--solstice,
+.card--huarache {
+  left: 50%;
+  padding-top: 50px;
+
+}
+.card__header {
+  position: relative;
+  height: 170px;
+  padding: 30px 30px 300px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  color: #fff;
+}
+
+
+.card__watermark {
+  overflow: hidden;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+.card__header--19 {
+  background-color: #F72648;
+  background-image: linear-gradient(#F72648, #FCCB3C);
+
+  background: #F72648;
+  background: linear-gradient(#F72648, #FCCB3C);
+}
+.card__header--solstice {
+  background-color: #3CA3FC;
+  background-image: linear-gradient(#3CA3FC, #FFD300);
+
+  background: #3CA3FC;
+  background: linear-gradient(#3CA3FC, #FFD300);
+}
+.card__header--huarache {
+  background-color: #26C9F7;
+  background-image: linear-gradient(#26C9F7, #DFFC3C);
+
+  background: #26C9F7;
+  background: linear-gradient(#26C9F7, #DFFC3C);
+}
+
+
+.card__logo {
+  width: 50px;
+  height: auto;
+}
+
+.card__price {
+  float: right;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.card__title {
+  margin: 35px 0 20px;
+  font-size: 15px;
+  line-height: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.card__subtitle {
+  display: block;
+  font-size: 13px;
+  font-weight: 300;
+}
+.card__body {
+  position: relative;
+  padding: 300px 30px 20px;
+}
+
+
+.card__image {
+  z-index: 1;
+  position: absolute;
+  top: -290px;
+  left: -30px;
+  width: 125%;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.card__wish-list {
+  display: block;
+  width: 50%;
+  margin: 0 auto 15px;
+  padding: 15px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.card__wish-list--19 {
+  color: #8850FF;
+  border-color: #8850FF;
+}
+
+.card__wish-list--solstice {
+  color: #FFBA00;
+  border-color: #FFBA00;
+}
+
+.card__wish-list--huarache {
+  color: #26C9F7;
+  border-color: #26C9F7;
+}
+
+.card__category {
+  display: block;
+  font-size: 12px;
+  color: #AEAEAE;
+  text-transform: uppercase;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card__will-animate {
+  will-change: transform;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+.photo{
+    display: block;
+    position: relative;
+    margin-top: 600px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
